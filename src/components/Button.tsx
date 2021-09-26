@@ -14,6 +14,12 @@ type Props = {
   htmlFor?: string;
 };
 
+const colors = {
+  primary: "red-500",
+  secondary: "gray-900",
+  tertiary: "red",
+};
+
 export const Button = ({ text, color, Icon, onClick, as, ...props }: Props) => {
   const Element = as || "button";
 
@@ -23,7 +29,7 @@ export const Button = ({ text, color, Icon, onClick, as, ...props }: Props) => {
         htmlFor={props.htmlFor}
         {...props}
         onClick={onClick}
-        className={`bg-${color} m-4 cursor-pointer text-white text-lg font-bold flex items-center px-6 py-3 rounded-lg`}
+        className={` bg-${colors[color]} m-4 cursor-pointer text-white text-lg font-bold flex items-center px-6 py-3 rounded-lg`}
       >
         {Icon && (
           <Icon className="w-4 h-4 object-contain mr-2 stroke-current text-white" />

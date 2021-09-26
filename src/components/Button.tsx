@@ -15,8 +15,8 @@ type Props = {
 };
 
 const colors = {
-  primary: "red-500",
-  secondary: "gray-900",
+  primary: "#DC2626",
+  secondary: "#111827",
   tertiary: "red",
 };
 
@@ -26,6 +26,9 @@ export const Button = ({ text, color, Icon, onClick, as, ...props }: Props) => {
   return (
     <div>
       <Element
+        style={{
+          backgroundColor: colors[color],
+        }}
         htmlFor={props.htmlFor}
         {...props}
         onClick={onClick}
